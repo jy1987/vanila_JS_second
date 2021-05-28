@@ -7,8 +7,7 @@ const movieApi = "19ef4808bf86257c609bd5bb79ed2f59";
 
 document.title="recommend movie for u"
 
-var factor = Date.now();
-var rndNum= Math.floor(Math.random(factor)*10);
+
 
 function getMovie() {
     fetch(
@@ -18,6 +17,8 @@ function getMovie() {
         return response.json();
       })
       .then(function(json) {
+        var factor = Date.now();
+        var rndNum= Math.floor(Math.random(factor)*10);
         const movieInfo= (json.results[rndNum]);
         const title = movieInfo.title;
         const rate = movieInfo.vote_average;
@@ -48,16 +49,5 @@ function getSingerImage() {
 })
    
 }
-
-
-function handlerClick (){
-    movieList.classList.toggle("clicked");
-    //console.log(a);
-}
-   
-function init(){ 
-    movieList.addEventListener("click", handlerClick)
-}
-getSingerImage();
 getMovie();
-init();
+setInterval(getMovie,7000);
