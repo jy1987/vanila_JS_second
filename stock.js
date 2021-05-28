@@ -26,7 +26,6 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-
 function printTobuy(title, prices, volumes){
     const price = numberWithCommas(`${prices}`);
     const volume = numberWithCommas(`${volumes}`);
@@ -65,8 +64,9 @@ function loadToBuy(){
     const loadToBuys = localStorage.getItem(TOBUY_LIST);
     if (loadToBuys!==null){
         const parsedToBuys=JSON.parse(loadToBuys);
+        console.log(parsedToBuys);
         parsedToBuys.forEach(function(toBuy) {
-            printStock(toBuy.title, toBuy.price,toBuy.volumn);
+            printTobuy(toBuy.title, toBuy.price,toBuy.volume);
         });
     }
 }
