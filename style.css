@@ -8,7 +8,7 @@ body {
 
 main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .title {
     width: 100%;
@@ -62,7 +62,7 @@ form {
 }
 
 input, button {
-    width: 250px;
+    width: 100px;
     padding: 15px;
     margin: 10px;
     text-align: center;
@@ -73,7 +73,7 @@ ul {
 }
 
 ul button {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: red;
 }
