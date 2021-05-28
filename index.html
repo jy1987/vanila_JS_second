@@ -9,19 +9,33 @@
 </head>
 <body>
     <header class="btn title">
-        <h1>What movie is your favorite?</h1>
+        <h1>popular movie & stock plan</h1>
+        <div class="dDay">until ChristMas...</div>
         <div class="time">11:44</div>
+        <div class="movieInfo">
+            <img src="" />
+            <div class="movieTitle"></div>
+        </div>
+        
     </header>
     <main>
-        <article class="movielist">
-            <h2>Recommend for U</h2>
-            <article class="movielist__first">1</article>
-            <article class="movielist__second">2</article>
-            <article class="movielist__third">3</article>
-            <article class="movielist__fourth">4</article>
-            </article>
+       <form class="stock-form">
+           <div>Today Plan</div>
+           <label for="title">오늘의 종목 : </label>
+           <input type="text"  id="title" placeholder="종목"/>
+           <label for="price">목표가 : </label>
+           <input type="text"  id="price" placeholder="목표가"/>
+           <label for="volume">매수량 : </label>
+           <input type="text" id="volume" placeholder="매수량"/>
+           <button>-저장-</button>
+       </form>
+
+       <ul class="print-stock">
+
+       </ul>
     </main>
 </body>
 <script src="movie.js"></script>
 <script src="time.js"></script>
+<script src="stock.js"></script>
 </html>
